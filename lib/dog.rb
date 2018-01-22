@@ -74,7 +74,7 @@ class Dog
   end
 
   def self.find_or_create_by(name:, breed:, id:nil)
-    if !id:nil
+    if id: id
       self.find_by_id(id: id)
     else nil
     end
