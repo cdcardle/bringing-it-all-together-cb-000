@@ -81,8 +81,12 @@ class Dog
     SQL
 
     row = DB[:conn].execute(sql, name, breed).flatten
-    if !dog.empty?
-
+    if !row.empty?
+      dog = Dog.new(name: row[1], breed: row[2], id: row[0])
+    else
+      dog = self.create(name: name, breed: breed)
+    end
+    dog
   end
 
   def self.find_by_name(name)
