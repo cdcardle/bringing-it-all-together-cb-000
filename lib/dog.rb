@@ -31,7 +31,7 @@ class Dog
   def new_from_db
     sql = <<-SQL
     SELECT * FROM dogs
-    WHERE
+    WHERE name = ?, breed = ?
     SQL
   end
 
