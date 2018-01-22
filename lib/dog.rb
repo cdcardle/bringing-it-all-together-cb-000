@@ -8,7 +8,7 @@ class Dog
     @id = id
   end
 
-  def ::create_table
+  def create_table
     sql = <<-SQL
     CREATE TABLE dogs (
       id INTEGER PRIMARY KEY,
