@@ -31,8 +31,9 @@ class Dog
   def new_from_db
     sql = <<-SQL
     SELECT * FROM dogs
-    WHERE name = ?, breed = ?
     SQL
+
+    DB[:conn].execute(sql)
   end
 
   def save
