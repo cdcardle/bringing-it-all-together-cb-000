@@ -46,4 +46,9 @@ class Dog
     end
     self
   end
+
+  def self.create(hash)
+    dog = self.new_from_db(hash)
+    dog
+  end
 end
