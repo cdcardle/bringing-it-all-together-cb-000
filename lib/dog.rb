@@ -27,4 +27,15 @@ class Dog
 
     DB[:conn].execute(sql)
   end
+
+  def new_from_db
+    sql = <<-SQL
+    SELECT * FROM dogs
+    WHERE
+    SQL
+  end
+
+  def save
+
+  end
 end
