@@ -28,13 +28,9 @@ class Dog
     DB[:conn].execute(sql)
   end
 
-  def new_from_db
-    sql = <<-SQL
-    SELECT * FROM dogs
-    SQL
-
-    dog = DB[:conn].execute(sql)[0]
-
+  def new_from_db(row)
+    dog = Dog.new
+    dog.id = row[0], dog.name = row[1], dog.breed = row[2]
   end
 
   def save
