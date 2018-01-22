@@ -80,7 +80,8 @@ class Dog
     WHERE name = ?, breed = ?
     SQL
 
-    dog = DB[:conn].execute(sql, name, breed)
+    row = DB[:conn].execute(sql, name, breed).flatten
+    if !dog.empty?
 
   end
 
