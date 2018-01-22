@@ -80,7 +80,7 @@ class Dog
     WHERE name = ?
     SQL
 
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, name: name)
   end
 
   def self.find_by_name(name)
