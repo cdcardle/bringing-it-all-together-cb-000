@@ -73,8 +73,8 @@ class Dog
     self.create(name: row[1], breed: row[2], id: row[0])
   end
 
-  def self.find_or_create_by
-    
+  def self.find_or_create_by(name:, breed:, id:nil)
+
   end
 
   def self.find_by_name
