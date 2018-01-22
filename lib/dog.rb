@@ -77,6 +77,7 @@ class Dog
     if !id:nil
       self.find_by_id(id: id)
     else nil
+    end
   end
 
   def self.find_by_name(name)
