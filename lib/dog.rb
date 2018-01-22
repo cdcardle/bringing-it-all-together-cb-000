@@ -33,7 +33,8 @@ class Dog
     SELECT * FROM dogs
     SQL
 
-    DB[:conn].execute(sql)
+    dog = DB[:conn].execute(sql)[0]
+
   end
 
   def save
