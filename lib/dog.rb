@@ -72,4 +72,8 @@ class Dog
     row = DB[:conn].execute(sql, id)[0]
     self.create(name: row[1], breed: row[2], id: row[1])
   end
+
+  def find_by_name
+
+  end
 end
