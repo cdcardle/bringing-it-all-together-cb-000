@@ -57,8 +57,8 @@ class Dog
     DB[:conn].execute(sql, self.name, self.breed, self.id)
   end
 
-  def self.create(name:, breed:, id:nil)
-    dog = self.new(name: name, breed: breed, id: id)
+  def self.create(hash)
+    dog = self.new(name: hash[:name], breed: hash[:breed], id: hash[:id])
     dog.save
   end
 
@@ -84,7 +84,7 @@ class Dog
     if !row.empty?
       dog = self.new_from_db(row)
     else
-      dog = self.create(name: name, breed: breed)
+      dog = self.create(hash)
     end
     dog
   end
