@@ -48,7 +48,7 @@ class Dog
   end
 
   def self.create(hash)
-    self.new(hash[name:], hash[breed:], nil)
+    self.new(hash[:name], hash[:breed])
     dog
   end
 end
